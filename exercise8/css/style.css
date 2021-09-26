@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    padding: 30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    margin: auto;
+    max-width: 1200px;
+}
+.flex-parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a{
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 32px;
+    line-height: 35.2px; 
+    letter-spacing: 2px;
+    color: #545454;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.logo p{
+    padding-top: 5px;
+    font-size: 13px;
+    line-height: 15px; 
+    letter-spacing: 1.5px;
+    color: #292929;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav li{
+    padding-left: 35px;
+}
+nav ul a{
+    padding-bottom: 4px;
+    display: block;
+    text-decoration: none;
+    color: #545454;
+    font-size: 15px;
+    line-height: 24px;
+}
+.active-a{
+    border-bottom: solid #F1CDB3 3px;
+    color: #292929;
+}
+.menu{
+    display: none;
+    width: 30px;
+}
+main{
+    padding: 80px 0 100px;
+    background-color: #F6F6F6;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    font: 35px/45.5px Georgia;
+    letter-spacing: 2.1px;
+    text-align: center;
+    color: #545454;
+}
+.cards{
+    display:flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    padding: 60px 0 30px;
+}
+.card{
+    margin-bottom: 30px;
+    flex-basis: 270px;
+    text-align: center;
+    background-color: #FAFAFA;
+    padding-bottom: 30px;
+    /* можно ли применять паддинги для разделения или логичней использовать флекс, column? */
+}
+.card p{
+    margin: 30px 0 30px;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    color: #545454;
+}
+.learn{
+    display: inline-block;
+    padding: 15px 45px;
+    border: solid 2px #F1CDB3;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #292929;
+}
+.pagination{
+    display: flex;
+    width: 340px;
+    justify-content: space-between;
+}
+.anactive, .next, .active{
+    width: 52px;
+    height: 52px;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: #F6F6F6;
+}
+.anactive{
+    border: solid 2px #CDCDCD;
+    color: #CDCDCD;
+}
+.active{
+    border: solid 2px #F1CDB3;
+    background-color: #F1CDB3;
+}
+.next{
+    border: solid 2px #F1CDB3;
+}
+footer{
+    background-image: linear-gradient(90.26deg, #7D604B 0.23%, #251000 99.8%);
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer h2{
+    padding-top: 0;
+    font-size: 35px;
+    letter-spacing: 2.1px; 
+    text-align: left;
+    color: #FFFFFF;
+}
+footer p{
+    font-size: 23px;
+    letter-spacing: 1.38px; 
+    color: #F1CDB3;
+}
+.footer-info, .footer-address{
+    display: flex;
+    height: 234px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-img{
+    padding-top: 40px;
+}
+.email, .number, .address-boston, .address-london{
+    display: flex;
+    justify-content: flex-start;
+}
+.address-boston img{
+    height: 32px;
+}
+.email img, .number img, .address-london img, .address-boston img{
+    padding-right: 20px;
+}
+@media(max-width: 1200px){
+    .container{
+        max-width: 95%;
+    }
+}
+@media(max-width: 945px){
+    .container{
+        max-width: 95%;
+    }
+    .cards{
+        justify-content: center; 
+    }
+    .card:nth-child(odd){
+        margin-right: 30px;
+    }
+    .contact{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer-info, .footer-address{
+        margin-top: 30px;
+    }
+    header{
+        padding: 30px 10px;
+    }
+    nav{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+}
+@media(max-width: 320px){
+    .container{
+        max-width: 95%;
+    }
+    .footer-address{
+        margin: 40px 0 90px;
+    }
+    .pagination{
+        width: 300px;
+    }
+    h2{
+        font: 25px/32.5px Georgia;
+        letter-spacing: 1.5px;
+    }
+}
